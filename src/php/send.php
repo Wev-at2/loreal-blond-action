@@ -21,9 +21,9 @@
 		$mail->Port = 587;
 		$mail->SMTPSecure = 'tls';
 		$mail->SMTPAuth = true;
-		$mail->Username = "digitalfavelasender@gmail.com";
-		$mail->Password = "DigitalFavela05!";
-		$mail->setFrom('digitalfavelasender@gmail.com', 'Deseja anunciar?');
+		$mail->Username = "seuemail@gmail.com";
+		$mail->Password = "suasenha";
+		$mail->setFrom('seuemail@gmail.com', 'Deseja anunciar?');
 		$mail->addAddress($destino, 'Deseja anunciar?');
 		$mail->Subject = "Digital Favela - Deseja anunciar?";
 		$mail->Body = $mensagem;
@@ -47,7 +47,7 @@
 							<p>Mensagem: {$msg}</p>
 						</div>";
 
-	$enviaEmail = sendMail('digitalfavela@digitalfavela.com.br', $contentMensagem);
+	$enviaEmail = sendMail('email@email.com.br', $contentMensagem);
 	
 	if ($enviaEmail != true) {
 		echo 'Erro ao enviar mensagem, tente novamente mais tarde.';

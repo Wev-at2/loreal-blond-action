@@ -18,9 +18,9 @@
         $mail->Port = 587;
         $mail->SMTPSecure = 'tls';
         $mail->SMTPAuth = true;
-        $mail->Username = "mocoquerobolo@gmail.com";
-        $mail->Password = "bolos020214";
-        $mail->setFrom('mocoquerobolo@gmail.com', 'Dashboard - Contato');
+        $mail->Username = "seuemail@gmail.com";
+        $mail->Password = "suasenha";
+        $mail->setFrom('seuemail@gmail.com', 'Dashboard - Contato');
         $mail->addAddress($destino, 'Dashboard - Contato');
         $mail->Subject  = "Dashboard - Contato";
         $mail->Body = $mensagem;
@@ -35,7 +35,7 @@
                         <p>chambra</p>
                         </div>";
 
-    $enviaEmail = sendMail('mocoquerobolo@gmail.com', $contentMensagem);
+    $enviaEmail = sendMail('seuemail@gmail.com', $contentMensagem);
 
     if ($enviaEmail != true) {
         echo '<script type="text/javascript">alert("Erro ao enviar mensagem, tente novamente mais tarde.");</script>';
