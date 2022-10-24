@@ -1,0 +1,115 @@
+section(class="t-kerastase")
+    div(class="t-kerastase__bg")
+        
+        div(class="t-kerastase__logo")
+            h1 KÉRASTASE
+            h4 PARIS
+        div(class="t-kerastase__form")
+            form(action="./" method="POST")
+                
+                div(class="t-kerastase__form--dados")
+
+                    div(class="t-kerastase__form--dados_nome" id="nome")
+                        label(for="nome")
+                            h3 Nome completo                            
+                        input(type="text" id="nome" name="nome")
+
+                    div(class="t-kerastase__form--dados_email" id="email")
+                        label(for="email")
+                            h3 E-mail
+                        input(type="email" name="email")
+
+                    div(class="t-kerastase__form--dados_celular" id="celular")
+                        label(for="celular")
+                            h3 Celular
+                        input(type="text" name="celular")
+                            
+                    div(class="t-kerastase__form--dados_numeroCasa" id="numeroCasa")
+                        label(for="numeroCasa")
+                            h3 Numero
+                        input(type="text" name="numeroCasa")
+
+                    div(class="t-kerastase__form--dados_cep" id="cep")
+                        label(for="cep")
+                            h3 CEP
+                        input(type="text" name="cep")
+
+                    div(class="t-kerastase__form--dados_complemento" id="complemento")
+                        label(for="complemento")
+                            h3 Complemento
+                        input(type="text" name="complemento")
+
+                    div(class="t-kerastase__form--dados_bairro" id="bairro")
+                        label(for="bairro")
+                            h3 Bairro
+                        input(type="text" name="bairro")
+
+                    div(class="t-kerastase__form--dados_cidade" id="cidade")
+                        label(for="cidade")
+                            h3 Cidade
+                        input(type="text" name="cidade")
+
+                    div(class="t-kerastase__form--dados_uf" id="uf")
+                        label(for="uf")
+                            h3 UF
+                            input(type="text" name="uf")
+                    
+                    div(class="t-kerastase__form--dados_corCabelo" id="corCabelo")
+                        h3 Qual é a cor do seu cabelo
+                        //-div(class="t-kerastase__form-corCabelo")
+                        div(class="t-kerastase__form--dados_corCabelo-radio")
+
+                            div(class="radio")
+                                input(type="radio" name="corCabelo" value="colorido")
+                                label(for="marketing") Colorido
+
+                            div(class="radio")
+                                input(type="radio" name="corCabelo" value="descolorido")
+                                label(for="marketing") Descolorido
+
+                            div(class="radio")
+                                input(type="radio" name="corCabelo" value="natural")
+                                label(for="marketing") Natural
+
+                    div(class="t-kerastase__form--dados_tomCabelo" id="tomCabelo")
+                        h3 Se é colorido ou descolorido, qual é o tom do seu cabelo?
+                        //-div(class="t-kerastase__form-TomCabelo")
+                        div(class="t-kerastase__form--dados_tomCabelo-radio")
+                            div(class="radio")
+                                input(type="radio" name="tomCabelo" value="loiro")
+                                label(for="marketing") Loiro
+
+                            div(class="radio")
+                                input(type="radio" name="tomCabelo" value="moreno")
+                                label(for="marketing") Moreno
+
+                            div(class="radio")
+                                input(type="radio" name="tomCabelo" value="preto")
+                                label(for="marketing") Preto
+
+                            div(class="radio")
+                                input(type="radio" name="tomCabelo" value="ruivo")
+                                label(for="marketing") Ruivo
+
+                            div(class="radio")
+                                input(type="radio" name="tomCabelo" value="corfantasia")
+                                label(for="marketing") Cor fantasia
+
+                        //-div(class="upload-nf" id="upload-nf")
+                            label(for="") Nota fiscal
+                            button(type="button") Upload da nota fiscal
+
+                div(class="t-kerastase__form--checkbox")
+                    div(class="checkbox")
+                        input(type="radio" id="marketing" name="marketing" value="marketing")
+                        label(for="marketing") Aceito receber e-mail/SMS da marca e parceiros.
+                    
+                    div(class="checkbox")
+                        input(type="radio" id="termos" name="termos" value="termos" required)
+                        label(for="termos") Li e aceito os termos de uso* e regularmento da campanha.
+                
+                div(class="t-kerastase__form--paragrafo")
+                    p "Você precisa ter pelo menos 18 (dezoito) anos para assinar. Você pode cancelar a assinatura a qualquer momento por meio do link encontrado em cada comunicação que enviarmos. Usaremos seus dados para enviar e-mails personalizados e para realizar análises de mercado. Para mais informações sobre como usamos seus dados pessoais, consulte nossa política de privacidade"
+
+                div(class="t-kerastase__form--button")
+                    button ENVIAR

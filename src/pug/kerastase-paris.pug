@@ -1,0 +1,24 @@
+html(lang="pt-BR")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="format-detection", content="telephone=no")
+        meta(name="viewport", content="minimal-ui, width=device-width, initial-scale=1.0, viewport-fit=cover")
+        meta(name="title", content="Kérastase Paris")
+        meta(name="description" content="Kérastase Paris")
+        link(rel="preload", href="https://segredosdesalao.vteximg.com.br/arquivos/Gotham-Medium.woff2.css", as="font", type="font/woff2", crossorigin)
+        link(rel="preload", href="https://segredosdesalao.vteximg.com.br/arquivos/Gotham-Book.woff2.css", as="font", type="font/woff2", crossorigin)
+        link(rel="preload", href="https://segredosdesalao.vteximg.com.br/arquivos/GothamBold.woff2.css", as="font", type="font/woff2", crossorigin)
+        link(rel="preload", href="assets/css/kerastase-paris.css", as="style")
+        link(href="https://www.kerastase.com.br/themes/Kerastase/images/assets/icon.png" rel="icon" type="image/png")
+        title KÉRASTASE PARIS
+    
+        link(rel="stylesheet", href="assets/css/kerastase-paris.css") 
+    
+    body(class='body__advertiser')
+
+        main(class="main")
+            include ./content/kerastase-paris.pug
+
+        script(type="text/javascript", src="//unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js", defer="defer")
+        script(type="text/javascript", src="assets/js/main.js")

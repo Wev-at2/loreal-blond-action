@@ -1,0 +1,17 @@
+@import "./header/_main-header.scss";
+@import "./footer/_main-footer.scss";
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  line-height: 1.2;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+	outline: none;
+}

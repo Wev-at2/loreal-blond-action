@@ -1,0 +1,188 @@
+input, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0 auto;
+    background-color: #000;
+}
+
+
+main {
+    min-height: 100vh;
+    font-family: $font-kerastase-medium;
+    font-size: $font-size-base;
+    line-height: 1.5em;
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+}
+
+.radio,
+.checkbox {
+    //display: flex;
+    //flex-wrap: wrap;
+    //flex: 1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    text-align: left;
+    
+    input {                        
+        width: 2em;
+        height: 2em;
+        margin: 0.5em 0.5em 0.5em 0;
+        cursor: pointer;
+        background: #fff;
+        border: 6px solid #fff;
+    }
+    input:checked {
+        background: #000;
+    }  
+}
+
+.t-kerastase {
+    &__bg {
+        background: url(../././img/bg-kerastase_D_1622x1250px.jpg) no-repeat top left #000;
+        background-size: cover;
+        height: 150vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        @media only screen and (max-width: 767px) {
+            background: url(../././img/bg-kerastase_M_812x1168px.jpg) no-repeat top center #000;
+            background-size: cover;
+        }
+    }
+    &__logo {
+        text-indent: -9000px;
+    }
+    &__form {
+        position: absolute;
+        z-index: 3;
+        background: #b7b7b7;
+        padding: 2.5vw;
+        width: 40vw;
+        right: 6vw;
+        top: 4vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        gap: 20px;
+        @media only screen and (max-width: 767px) {
+            position: absolute;
+            top: 40vh;
+            left: 6vw;
+            right: 6vw;
+            width: auto;
+            min-width: 300px;
+            padding: 4vw;
+            margin-bottom: 4vh;
+        }
+
+        &--dados {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            @media only screen and (max-width: 767px) {
+                display: grid;
+                grid-template-columns: auto;
+            }
+
+            &_nome,
+            &_email,
+            &_celular,
+            &_complemento,
+            &_bairro,
+            &_corCabelo,
+            &_tomCabelo {
+                grid-column: 1 / -1;
+            }
+
+            &_corCabelo,
+            &_tomCabelo {
+                //margin: 4px 0;
+                &-radio {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                    gap: 0 10px;
+                    place-content: center;
+                    @media only screen and (max-width: 767px) {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                    }
+
+                    label {
+                        font-family: $font-kerastase-book;
+                        font-weight: $font-weight-light;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+
+        #nome input, #email input, #celular input, #numeroCasa input, #cep input,
+        #complemento input, #bairro input, #cidade input, #uf input {
+            display: block;
+            padding: 1vh;
+            font-size: 1.2em;
+            width: 100%;
+            border: none;
+            //margin: 0.7vh 0;
+        }
+
+        &--checkbox {
+            margin: 2vh 0 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            gap: 0 20px;
+            align-items: center;
+            place-content: start;
+            @media only screen and (max-width: 767px) {
+            }
+            label {
+                font-family:
+                $font-kerastase-medium;
+                font-size: 1.2em;
+                @media only screen and (max-width: 767px) {
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        &--paragrafo {
+            font-size: smaller;
+            margin: 10px 0;
+            text-align: start;
+            @media only screen and (max-width: 767px) {
+                margin: 2vw;
+            }
+        }
+
+        &--button {
+            button {
+                background: #000;
+                color: #fff;
+                font-family: Gotham-Medium;
+                font-size: 1.5em;
+                display: block;
+                width: auto;
+                padding: 1vh 2vw;
+                margin: 0 auto;
+                border: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;@media only screen and (max-width: 767px) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

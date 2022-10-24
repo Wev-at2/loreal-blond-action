@@ -1,0 +1,383 @@
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+main {
+    min-height: 100vh;
+    font-family: $font-kerastase-medium;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.t-segredo {
+    &__bg {
+        position: relative;
+        margin-bottom: -8px;
+        
+        &-infos {
+            position: absolute;
+            top: 25%;
+            //left: 6.5%;
+            left: 25%;
+            right: 25%;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //border: 1px solid red;
+            
+            @media only screen and (max-width: 767px) {
+                top: 20%;
+                max-width: 50vw;
+            }
+            &--logo {
+                margin-bottom: 80px;
+                max-width: 45vw;
+                @media only screen and (max-width: 767px) {
+                    margin-bottom: 30px;
+                }
+            }
+            
+        }
+    }
+
+        &__black {
+            //padding: 5vh 2%;
+            width: 90vw;
+            @media only screen and (max-width: 767px) {
+                //padding: 6vw /*6.5%*/;
+            }
+
+            p {
+                color: #fff;
+                font-size: 2.9vw;
+                //font-size: 3vw;
+                line-height: 4vw;
+                text-transform: uppercase;
+                font-family: $font-kerastase-book;
+                text-align: center;
+                display: block;
+            }
+            &-text {
+                &--bottom {
+                    border: 2px solid #e2c065;
+                    padding: 0.5vw;
+                    //padding: 5vh 6.5%;
+                    margin-top: 10px;
+                    @media only screen and (max-width: 767px) {
+                        padding: 1vw;
+                    }
+                }
+                &--top1 p{
+                    //line-height: 5vw;
+                    line-height: 6vw!important;
+                    color: #fff!important;
+                    background: #000;
+                    font-size: 3vw;
+                    font-weight: 100;
+                    font-family: $font-loreal-black;
+                    text-align: center;
+                    text-transform: none;
+                    width: 100vw;
+                    padding: 5vh;
+                    @media only screen and (max-width: 767px) {
+                        padding: 6vw 4vh;
+                    }
+                }
+            }
+        }
+    &__yellow {
+        background: #e2c065;
+        padding: 2vh;
+        box-sizing: border-box;
+        @media only screen and (max-width: 767px) {
+            padding: 2vw 6.5%;
+        }
+        /*p {
+            color: #fff;
+            font-size: 3.8vw;
+            line-height: 5vw;
+            text-transform: uppercase;
+            font-family: $font-loreal-black;
+            text-align: center;
+            display: block;
+        }
+        &-text {
+            &--top {
+                margin-top: 10px;
+                font-size: 5vw!important;
+                line-height: 6vw!important;
+                color: #000!important;
+            }
+        }*/
+    }
+    &__benefits {
+        padding: 8vh 6.5%;
+        @media only screen and (max-width: 767px) {
+            padding: 2vh 6.5%;
+        }
+        &-content {
+            border: 2px solid #e2c065;
+            padding: 15vh 4vw 10vh;
+            @media only screen and (max-width: 767px) {
+                padding: 4vw 2vw 2vw;
+            }
+            h3 {
+                color: #000;
+                font-size: 3.8vw;
+                line-height: 5vw;
+                text-transform: uppercase;
+                font-family: $font-loreal-black;
+                text-align: center;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                width: 100%;
+                &::after {
+                    content: '';
+                    background: #e2c065;
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    left: 0;
+                    bottom: -30px;
+                    @media only screen and (max-width: 767px) {
+                        bottom: -10px;
+                    }
+                }
+            
+            }
+            &--flex {
+                margin-top: 100px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                @media only screen and (max-width: 767px) {
+                    margin-top: 20px;
+                }
+                &-item {
+                    width: 49%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 0 4vw;
+                    margin-bottom: 50px;
+                    @media only screen and (max-width: 767px) {
+                        padding: 0 2vw;
+                        margin-bottom: 20px;
+                    }
+                    figure {
+                        max-width: 50%;
+                        @media only screen and (max-width: 767px) {
+                            max-width: 60%;
+                        }
+                    }
+                    p {
+                        color: #000;
+                        font-size: 2vw;
+                        line-height: 2.7vw;
+                        font-family: $font-kerastase-book;
+                        text-align: center;
+                        display: block;
+                        margin-top: 30px;
+                        @media only screen and (max-width: 767px) {
+                            font-size: 2.8vw;
+                            line-height: 3.6vw;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__video {
+        background: #000;
+        width: 100vw;
+        padding: 14vh;
+        display: flex;
+        @media only screen and (max-width: 767px) {
+            padding: 5vw 6.5%;
+        }
+        h4 {
+            color: #fff;
+            font-size: 4vw;
+            line-height: 5vw;
+            text-transform: uppercase;
+            font-family: $font-loreal-black;
+            text-align: center;
+            display: block;
+            padding: 0 3vw;
+        }
+        &-video {
+            justify-self: center;
+            @media only screen and (max-width: 767px) {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    &__testimony {
+        background: #000;
+        padding-top: 8vw;
+        @media only screen and (max-width: 767px) {
+            padding-top: 2vw;
+            margin-top: -1px;
+        }
+        
+        h5 {
+            color: #fff;
+            font-size: 3.8vw;
+            line-height: 5vw;
+            text-transform: uppercase;
+            font-family: $font-loreal-black;
+            display: block;
+            position: relative;
+            width: 45vw;
+            letter-spacing: 0.7vw;
+            background: #e2c065;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        &-cadastro {
+            h5 {
+                width: 80vw;
+            }
+        }
+        
+        &-flex {
+            display: flex;
+            justify-content: space-between;
+            padding: 6vw 0 10vw 2%;
+            @media only screen and (max-width: 767px) {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                flex-wrap: initial;
+                justify-content: flex-start;
+                padding: 0 30px 50px;
+                margin: 30px 0;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                &::-webkit-scrollbar-track-piece {
+                    display: none;
+                }
+            }
+            &--item {
+                width: 32.5%;
+                position: relative;
+                @media only screen and (max-width: 767px) {
+                    flex: 0 0 auto;
+                    max-width: 70%;
+                    width: 70%;
+                }
+                &-title {
+                    color: #fff;
+                    font-size: 1.5vw;
+                    line-height: 3vw;
+                    text-transform: uppercase;
+                    font-family: $font-loreal-black;
+                    letter-spacing: 0.7vw;
+                    @media only screen and (max-width: 767px) {
+                        font-size: 3vw;
+                        line-height: 5vw;
+                    }
+                }
+                &-text {
+                    color: #fff;
+                    font-size: 1vw;
+                    line-height: 1.6vw;
+                    font-family: $font-kerastase-book;
+                    letter-spacing: 0.05vw;
+                    @media only screen and (max-width: 767px) {
+                        font-size: 2vw;
+                        line-height: 3vw;
+                    }
+                   
+                }
+                small {
+                    color: #fff;
+                    font-size: 1vw;
+                    line-height: 1.6vw;
+                    font-family: $font-kerastase-book;
+                    margin-top: 2vw;
+                    display: block;
+                    letter-spacing: 0.05vw;
+                    @media only screen and (max-width: 767px) {
+                        font-size: 2vw;
+                        line-height: 3vw;
+                    }
+                }
+                &-bottom {
+                    margin-top: 2vw;
+                    strong {
+                        color: #fff;
+                        font-size: 1vw;
+                        line-height: 2vw;
+                        font-family: $font-loreal-black;
+                        padding-left: 2.5vw;
+                        position: relative;
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            width: 2vw;
+                            height: 2vw;
+                            position: absolute;
+                            left: 0;
+                            background: url("../img/segredo-insta.png") center no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+            }
+            &--banner {
+                position: absolute;
+                top: 9vw;
+                right: 20px;
+                width: 45%;
+                @media only screen and (max-width: 767px) {
+                    width: 35%;
+                    top: 22vw;
+                }
+            }
+        }
+       
+    }
+
+    &__bottom {
+        background: #fff;
+        padding: 14vh 6.5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @media only screen and (max-width: 767px) {
+            padding: 4vw 6.5%;
+        }
+        &-bottom {
+            display: flex;
+            margin-top: 50px;
+            @media only screen and (max-width: 767px) {
+                margin-top: 10px;
+            }
+            &--banner {
+                max-width: 15vw;
+                margin: 0 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media only screen and (max-width: 767px) {
+                    max-width: 25vw;
+                    margin: 0 20px;
+                }
+            }
+        }
+        &-top {
+            &--banner {
+                max-width: 25vw;
+            }
+        }
+    }
+}
